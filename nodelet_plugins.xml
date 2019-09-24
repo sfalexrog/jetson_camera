@@ -1,0 +1,7 @@
+<library path="lib/libjetson_camera_nodelet">
+   <class name="jetson_camera/JetsonCameraNodelet" type="jetson_camera::JetsonCameraNodelet" base_class_type="nodelet::Nodelet">
+      <description>
+         Jetson CSI camera nodelet
+      </description>
+   </class>
+</library>
