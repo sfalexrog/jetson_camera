@@ -74,11 +74,11 @@ private:
 
 		// Rescale camera information
 
-		cam_info_.width = width_;
-		cam_info_.height = height_;
-
 		double width_coeff = static_cast<double>(width_) / cam_info_.width;
 		double height_coeff = static_cast<double>(height_) / cam_info_.height;
+
+		cam_info_.width = width_;
+		cam_info_.height = height_;
 
 		cam_info_.K[0] *= width_coeff;
 		cam_info_.K[2] *= width_coeff;
