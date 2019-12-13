@@ -16,3 +16,13 @@ The node(let) is based on the [JetsonHacks' Jetson Nano CSI repository](https://
 ## Nodelet
 
 The node is meant to run as a nodelet (`jetson_camera/JetsonCameraNodelet`). In fact, the node is basically a standalone simplified nodelet manager.
+
+## Miscellaneous stuff
+
+### Red tint on camera image
+
+The image captured by this node may have a red tint that is more pronounced near the edges. This can be fixed to a degree by using an ISP camera override.
+
+An ISP override file for an Arducam imx219 board (`camera_overrides.isp`) is placed in this repository in the `extra` folder. Place it in the `/var/nvidia/nvcam/settings` on your Jetson Nano, set its permissions to `664` and its owner:group to `root:root`.
+
+Note that, [according to RidgeRunner](https://developer.ridgerun.com/wiki/index.php?title=JetsonTX2/V4L2_driver_support/V4L2_drivers_available_for_Jetson_SoCs#ISP_calibration), only ODMs have access to the required tools for ISP calibration files.
